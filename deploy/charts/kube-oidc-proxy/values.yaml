@@ -14,7 +14,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 443
   annotations:
     # You can use this field to add annotations to the Service.
@@ -34,9 +34,9 @@ tls:
 oidc:
   # A minimal configuration requires setting clientId, issuerUrl and usernameClaim
   # values.
-  clientId: ""
-  issuerUrl: ""
-  usernameClaim: ""
+  clientId: "677348934092-kimms7qrqlqpl5eo0nk8pm3rgkjgl8s8.apps.googleusercontent.com"
+  issuerUrl: "https://accounts.google.com"
+  usernameClaim: "email"
 
   # PEM encoded value of CA cert that will verify TLS connection to
   # OIDC issuer URL. If not provided, default hosts root CA's will be used.
